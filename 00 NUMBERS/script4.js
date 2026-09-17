@@ -19,6 +19,5 @@ for (let index = 0; index <= 50; index+=2) {
 if (count > 0) {
     table.appendChild(tr);
 }
-document.write("¡Hola mundo!");
 tableContainer.appendChild(table);
 }
