@@ -1,4 +1,6 @@
-const tableContainer = document.querySelector('.table-container');
+const mainButton = document.getElementById('btnNew');
+if (mainButton) {
+    const tableContainer = document.querySelector('.table-container');
 const table = document.createElement('table');
 let tr = document.createElement('tr');
 let count = 0;
@@ -13,7 +15,10 @@ for (let index = 2; index < 50; index+=2) {
     tr.appendChild(td);
     count++;
 }
+
 if (count > 0) {
     table.appendChild(tr);
 }
+document.write("¡Hola mundo!");
 tableContainer.appendChild(table);
+}
