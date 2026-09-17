@@ -1,1 +1,1 @@
-const button = document
+const button = document.getElementById
