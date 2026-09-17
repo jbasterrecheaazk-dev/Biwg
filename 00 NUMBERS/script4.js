@@ -11,7 +11,7 @@ for (let index = 2; index < 50; index+=2) {
         count = 0;
     }
     const td = document.createElement('td');
-    td.textContent = i;
+    td.textContent = index;
     tr.appendChild(td);
     count++;
 }
