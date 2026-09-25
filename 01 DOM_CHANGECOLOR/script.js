@@ -15,7 +15,11 @@ button.addEventListener( "click", function () {
     }
 });
 const caja = document.getElementById('colorBtn');
-caja.addEventListener('Mouse is out', () => {
-    console.log("Hello World");
+caja.addEventListener('Mouse is in', () => {
     caja.style.backgroundColor = 'red';
+    caja.style.color = 'white';
+});
+caja.addEventListener('Mouse is out', () => {
+    caja.style.backgroundColor = '';
+    caja.style.color = '';
 });
