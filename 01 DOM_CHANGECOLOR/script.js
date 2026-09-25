@@ -14,12 +14,12 @@ button.addEventListener( "click", function () {
         colorID = 0;
     }
 });
-const caja = document.getElementById('colorBtn');
-caja.addEventListener('Mouse is in', () => {
-    caja.style.backgroundColor = 'red';
-    caja.style.color = 'white';
+
+button.addEventListener('mouseenter', () => {
+    button.style.backgroundColor = 'red';
+    button.style.color = 'white';
 });
-caja.addEventListener('Mouse is out', () => {
-    caja.style.backgroundColor = '';
-    caja.style.color = '';
+button.addEventListener('mouseleave', () => {
+    button.style.backgroundColor = '';
+    button.style.color = '';
 });
