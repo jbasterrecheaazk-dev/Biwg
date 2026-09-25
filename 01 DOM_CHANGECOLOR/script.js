@@ -17,7 +17,7 @@ button.addEventListener( "click", function () {
 const caja = document.getElementById('hoverBox');
 caja.addEventListener('mouseenter', () => {
     caja.style.backgroundColor = 'lightyellow';
-    caja.style.width = "300px";
+    caja.style.width = "500px";
     caja.style.height = "300px";
 //  caja.style.color = 'white';
 });
