@@ -14,12 +14,12 @@ button.addEventListener( "click", function () {
         colorID = 0;
     }
 });
-
-button.addEventListener('mouseenter', () => {
-    button.style.backgroundColor = 'red';
-    button.style.color = 'white';
+const caja = document.getElementById('hoverBox');
+caja.addEventListener('mouseenter', () => {
+    caja.style.backgroundColor = 'red';
+    caja.style.color = 'white';
 });
-button.addEventListener('mouseleave', () => {
-    button.style.backgroundColor = '';
-    button.style.color = '';
+caja.addEventListener('mouseleave', () => {
+    caja.style.backgroundColor = '';
+    caja.style.color = '';
 });
