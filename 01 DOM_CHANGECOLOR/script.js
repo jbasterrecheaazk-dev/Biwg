@@ -17,9 +17,13 @@ button.addEventListener( "click", function () {
 const caja = document.getElementById('hoverBox');
 caja.addEventListener('mouseenter', () => {
     caja.style.backgroundColor = 'lightyellow';
-    caja.style.color = 'white';
+    caja.style.width = "300px";
+    caja.style.height = "200px";
+//  caja.style.color = 'white';
 });
 caja.addEventListener('mouseleave', () => {
     caja.style.backgroundColor = '';
-    caja.style.color = '';
+    caja.style.width = '';
+    caja.style.height = '';
+//  caja.style.color = '';
 });
