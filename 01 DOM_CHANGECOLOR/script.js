@@ -12,7 +12,7 @@ button.addEventListener( "click", function () {
 //      "#f0f4f8"
         document.body.style.backgroundColor = "lightgreen";
         colorID = 0;
-        
+
     }
 });
 const caja = document.getElementById('hoverBox');
@@ -22,12 +22,14 @@ caja.addEventListener('mouseenter', () => {
     caja.style.height = "300px";
     caja.textContent = "Mouse is in";
     caja.style.position = "sticky";
+    caja.style.fontSize = '';
 //  caja.style.color = 'white';
 });
 caja.addEventListener('mouseleave', () => {
     caja.style.backgroundColor = '';
     caja.style.width = '';
     caja.style.height = '';
+    //caja.style.position = '';
     caja.style.fontSize = '1.5rem';
     caja.textContent = "Mouse is out";
 //  caja.style.color = '';
