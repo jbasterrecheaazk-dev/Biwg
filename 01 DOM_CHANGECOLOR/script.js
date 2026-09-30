@@ -12,6 +12,7 @@ button.addEventListener( "click", function () {
 //      "#f0f4f8"
         document.body.style.backgroundColor = "lightgreen";
         colorID = 0;
+        
     }
 });
 const caja = document.getElementById('hoverBox');
