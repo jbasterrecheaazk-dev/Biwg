@@ -21,8 +21,8 @@ caja.addEventListener('mouseenter', () => {
     caja.style.width = "500px";
     caja.style.height = "300px";
     caja.textContent = "Mouse is in";
-    caja.style.position = "sticky";
-    caja.style.fontSize = '';
+    caja.style.position = "fixed";
+    caja.style.fontSize = '1.5rem';
 //  caja.style.color = 'white';
 });
 caja.addEventListener('mouseleave', () => {
@@ -30,7 +30,7 @@ caja.addEventListener('mouseleave', () => {
     caja.style.width = '';
     caja.style.height = '';
     //caja.style.position = '';
-    caja.style.fontSize = '1.5rem';
+    caja.style.position = "";
     caja.textContent = "Mouse is out";
 //  caja.style.color = '';
 });
