@@ -5,14 +5,15 @@ image.addEventListener('mouseenter', () => {
 image.addEventListener('mouseleave', () => {
     image.src = "IMG/erreala.png";
 });
+const textop = document.getElementById('textop');
 const formFondo = document.querySelector('input[name="radio"]:checked');
 formFondo.addEventListener("click", function() {
     if (value="12") {
-        
-    } elseif (value="20") {
-        
-    } elseif (value="24") {
-        
+        textop.style.fontSize = '12';
+    } else if (value="20") {
+         textop.style.fontSize = '20';
+    } else if (value="24") {
+         textop.style.fontSize = '24';
     } else {
         console.log("Error.");
     }
