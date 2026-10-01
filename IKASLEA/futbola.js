@@ -13,13 +13,13 @@ radios.forEach(radio => {
         
         if (radio.value === "12") {
             // "parrafos" hainbat elementu direnez, forEach bat erabiltzen dugu guztiei letra-tamaina aldatzeko
-            parrafos.forEach(p => p.style.fontSize = '12px');
+            textop.forEach(p => p.style.fontSize = '12px');
             
         } else if (radio.value === "20") {
-            parrafos.forEach(p => p.style.fontSize = '20px');
+            textop.forEach(p => p.style.fontSize = '20px');
             
         } else if (radio.value === "24") {
-            parrafos.forEach(p => p.style.fontSize = '24px');
+            textop.forEach(p => p.style.fontSize = '24px');
             
         } else {
             console.log("Errorea.");
