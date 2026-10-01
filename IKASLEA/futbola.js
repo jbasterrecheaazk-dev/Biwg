@@ -5,11 +5,38 @@ image.addEventListener('mouseenter', () => {
 image.addEventListener('mouseleave', () => {
     image.src = "IMG/erreala.png";
 });
-const textop = document.getElementById('textop');
-const radio = document.getElementById('radio');
-const formFondo = document.querySelector('input[name="radio"]:checked');
+const textop = document.querySelectorAll('textop');
+const radios = document.querySelectorAll('input[name="radio"]');
+//const formFondo = document.querySelector('input[name="radio"]:checked');
+radios.forEach(radio => {
+    radio.addEventListener("click", function() {
+        
+        if (radio.value === "12") {
+            // "parrafos" hainbat elementu direnez, forEach bat erabiltzen dugu guztiei letra-tamaina aldatzeko
+            parrafos.forEach(p => p.style.fontSize = '12px');
+            
+        } else if (radio.value === "20") {
+            parrafos.forEach(p => p.style.fontSize = '20px');
+            
+        } else if (radio.value === "24") {
+            parrafos.forEach(p => p.style.fontSize = '24px');
+            
+        } else {
+            console.log("Errorea.");
+        }
+        
+    });
+});
+
+const izena = document.getElementById('izena');
+const adina = document.getElementById('adina');
+
+/*
 formFondo.addEventListener("click", function() {
-    if (radio.value = "12") {
+    radio.forEach(radio => {
+        
+    });
+    /*if (radio.value = "12") {
         textop.style.fontSize = '12';
     } else if (radio.value="20") {
          textop.style.fontSize = '20';
@@ -19,3 +46,4 @@ formFondo.addEventListener("click", function() {
         console.log("Error.");
     }
 });
+*/
