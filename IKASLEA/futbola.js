@@ -12,11 +12,14 @@ radios.forEach(radio => {
     radio.addEventListener("click", function() {
         
         if (radio.value === "12" || radio.value === "Txikia") {
-            textop.forEach(textop => textop.style.fontSize = '12px');
+            document.querySelector('textop').style.fontSize = '12px';
+            /*textop.forEach(textop => textop.style.fontSize = '12px');*/
         } else if (radio.value === "20" || radio.value === "Ertaina") {
-            textop.forEach(textop => textop.style.fontSize = '20px');
+            document.querySelector('textop').style.fontSize = '20px';
+            /*textop.forEach(textop => textop.style.fontSize = '20px');*/
         } else if (radio.value === "24" || radio.value === "Handia") {
-            textop.forEach(textop => textop.style.fontSize = '24px');
+            document.querySelector('textop').style.fontSize = '24px';
+            /*textop.forEach(textop => textop.style.fontSize = '24px');*/
         } else {
             console.log("Errorea.");
         }
