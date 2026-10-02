@@ -28,7 +28,13 @@ radios.forEach(radio => {
 
 const izena = document.getElementById('izena');
 const adina = document.getElementById('adina');
-
+const balorazioa = document.getElementById('balorazioa');
+const bidali = document.getElementById('bidali');
+bidali.addEventListener("click", function() {
+    if (adina < 18 && adina > 80) {
+        console.log("Errorea.");
+    }
+});
 /*
 formFondo.addEventListener("click", function() {
     radio.forEach(radio => {
