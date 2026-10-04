@@ -29,13 +29,26 @@ radios.forEach(radio => {
 const izena = document.getElementById('izena');
 const adina = document.getElementById('adina');
 const balorazioa = document.getElementById('balorazioa');
+
 const bidali = document.getElementById('bidali');
-bidali.addEventListener("click", function() {
+bidali.addEventListener('submit', function() {
+    if (adina < 18 || adina > 80) {
+        console.log("Errorea.");
+    } else {
+       console.log("Hello."); 
+    }
+    balorazioa.addEventListener('input', function (e) {
+       this.value = this.value.replace(/[^0-9]/g, ''); 
+    });
+});
+/*
+let FormEncuesta = document.getElementsByName('FormEncuesta');
+FormEncuesta.addEventListener("click", function() {
     if (adina < 18 && adina > 80) {
         console.log("Errorea.");
     }
 });
-/*
+
 formFondo.addEventListener("click", function() {
     radio.forEach(radio => {
         
