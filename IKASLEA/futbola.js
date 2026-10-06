@@ -5,24 +5,24 @@ image.addEventListener('mouseenter', () => {
 image.addEventListener('mouseleave', () => {
     image.src = "IMG/erreala.png";
 });
-const textop = document.querySelectorAll('textop');
-const radios = document.querySelectorAll('input[name="radio"]');
+const radio = document.querySelectorAll('input[name="radio"]');
+const textop = document.getElementsByClassName('textop');
 //const formFondo = document.querySelector('input[name="radio"]:checked');
-radios.forEach(radio => {
-    radio.addEventListener("click", function() {
-        
-        if (radio.value === "12" || radio.value === "Txikia") {
-            document.querySelector('textop').style.fontSize = '12px';
-            /*textop.forEach(textop => textop.style.fontSize = '12px');*/
-        } else if (radio.value === "20" || radio.value === "Ertaina") {
-            document.querySelector('textop').style.fontSize = '20px';
-            /*textop.forEach(textop => textop.style.fontSize = '20px');*/
-        } else if (radio.value === "24" || radio.value === "Handia") {
-            document.querySelector('textop').style.fontSize = '24px';
-            /*textop.forEach(textop => textop.style.fontSize = '24px');*/
+radio.forEach(radio => {
+    radio.addEventListener("change", function() {
+        textop.forEach(textop => {
+             textop.style.fontSize = radio.value + "px";
+        });
+        /*
+        if (radio.value === "12") {
+           textop.style.fontSize = "12px";
+        } else if (radio.value === "20") {
+            textop.style.fontSize = "20px";
+        } else if (radio.value === "24") {
+            textop.style.fontSize = "24px";
         } else {
             console.log("Errorea.");
-        }
+        }*/
     });
 });
 
@@ -32,7 +32,7 @@ const balorazioa = document.getElementById('balorazioa');
 
 const bidali = document.getElementById('bidali');
 bidali.addEventListener('submit', function() {
-    if (adina < 18 || adina > 80) {
+    if (adina <= 18 || adina >= 80) {
         console.log("Errorea.");
     } else {
        console.log("Hello."); 
