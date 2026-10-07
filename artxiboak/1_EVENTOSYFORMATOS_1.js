@@ -6,6 +6,11 @@ image.addEventListener('mouseenter', () => {
 image.addEventListener('mouseleave', () => {
     image.src = "images/animal1.jpg";
 });
+
 picture.addEventListener('click', () => {
-    image.src = "images/paisaje2.jpg";
+    if (picture.src.includes('images/paisaje1.jpg')) {
+    picture.src = "images/paisaje2.jpg";
+} else {
+   picture.src = 'images/paisaje1.jpg';
+}   
 });
