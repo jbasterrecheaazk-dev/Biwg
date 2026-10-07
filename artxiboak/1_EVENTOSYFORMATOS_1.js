@@ -9,8 +9,17 @@ image.addEventListener('mouseleave', () => {
 
 picture.addEventListener('click', () => {
     if (picture.src.includes('images/paisaje1.jpg')) {
-    picture.src = "images/paisaje2.jpg";
+    picture.src = 'images/paisaje2.jpg';
 } else {
    picture.src = 'images/paisaje1.jpg';
 }   
+});
+const middle = document.getElementsByClassName('middle');
+middle.addEventListener('mouseenter', () => {
+    document.body.style.backgroundColor = 'white';
+    document.body.style.color = 'black';
+});
+middle.addEventListener('mouseleave', () => {
+    document.body.style.backgroundColor = 'black';
+    document.body.style.color = 'white';
 });
