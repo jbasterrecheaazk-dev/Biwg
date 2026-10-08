@@ -6,7 +6,7 @@ image.addEventListener('mouseleave', () => {
     image.src = "IMG/erreala.png";
 });
 const radio = document.querySelectorAll('input[name="radio"]');
-const textop = document.getElementsByClassName('textop');
+let textop = document.querySelectorAll('textop');
 //const formFondo = document.querySelector('input[name="radio"]:checked');
 radio.forEach(radio => {
     radio.addEventListener("change", function() {
@@ -15,14 +15,15 @@ radio.forEach(radio => {
         });
         /*
         if (radio.value === "12") {
-           textop.style.fontSize = "12px";
+           textop.style.textop.fontSize = "12px";
         } else if (radio.value === "20") {
-            textop.style.fontSize = "20px";
+            textop.style.textop.fontSize = "20px";
         } else if (radio.value === "24") {
-            textop.style.fontSize = "24px";
+            textop.style.textop.fontSize = "24px";
         } else {
             console.log("Errorea.");
-        }*/
+        }
+        */
     });
 });
 
