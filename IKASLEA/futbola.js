@@ -11,7 +11,7 @@ let textop = document.querySelectorAll('textop');
 radio.forEach(radio => {
     radio.addEventListener("change", function() {
         textop.forEach(textop => {
-             textop.style.fontSize = radio.value + "px";
+             textop.style.textop.fontSize = radio.value + "px";
         });
         /*
         if (radio.value === "12") {
