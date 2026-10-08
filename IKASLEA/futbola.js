@@ -40,10 +40,13 @@ const bakarrikInt = (e) => {
     };
 
 bidali.addEventListener('submit', function() {
+    e.preventDefault();
+    if (adina) adina.addEventListener('keypress', bakarrikInt);
+    if (balorazioa) balorazioa.addEventListener('keypress', bakarrikInt);
     if (adina <= 18 || adina >= 80) {
         console.log("Errorea.");
     } else {
-       console.log("Hello."); 
+       console.log("Hello.");
     };
     
 });
