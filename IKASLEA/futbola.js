@@ -33,17 +33,19 @@ const balorazioa = document.getElementById('balorazioa');
 
 const bidali = document.getElementById('bidali');
 
+const bakarrikInt = (e) => {
+        if (e.key < '0' || e.key > '9') {
+            e.preventDefault();
+        }
+    };
+
 bidali.addEventListener('submit', function() {
     if (adina <= 18 || adina >= 80) {
         console.log("Errorea.");
     } else {
        console.log("Hello."); 
-    }
-    balorazioa = (e) => {
-        if (e.key < '0' || e.key > '9') {
-            e.preventDefault();
-        }
-    }
+    };
+    
 });
 /*
 let FormEncuesta = document.getElementsByName('FormEncuesta');
