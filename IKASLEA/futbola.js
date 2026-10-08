@@ -38,18 +38,31 @@ const bakarrikInt = (e) => {
             e.preventDefault();
         }
     };
-
-bidali.addEventListener('submit', function() {
-    e.preventDefault();
     if (adina) adina.addEventListener('keypress', bakarrikInt);
     if (balorazioa) balorazioa.addEventListener('keypress', bakarrikInt);
-    if (adina <= 18 || adina >= 80) {
-        console.log("Errorea.");
-    } else {
-       console.log("Hello.");
-    };
-    
-});
+    if (condition) {
+        bidali.addEventListener('submit', function() {
+            e.preventDefault();
+            let adinaZenbakia = parseInt(
+                adina.value, 10
+            );
+            let balorazioZenbakia = parseInt(
+                balorazioa.value, 10
+            );
+            ('return').
+            if (isNaN(adinaZenbakia) || adinaZenbakia <= 18 || adinaZenbakia >= 80) {
+                alert("Errorea.");
+                console.log("Errorea.");
+                return;
+            };
+            if (isNaN(balorazioZenbakia) || balorazioZenbakia <= 18 || balorazioZenbakia >= 80) {
+                alert("Errorea.");
+                console.log("Errorea.");
+                return;
+            };
+            alert("Formularioa bidali da..");
+        });
+    }
 /*
 let FormEncuesta = document.getElementsByName('FormEncuesta');
 FormEncuesta.addEventListener("click", function() {
