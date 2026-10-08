@@ -6,7 +6,7 @@ image.addEventListener('mouseleave', () => {
     image.src = "IMG/erreala.png";
 });
 const radio = document.querySelectorAll('input[name="radio"]');
-let textop = document.querySelectorAll('textop');
+const textop = document.querySelectorAll('textop');
 //const formFondo = document.querySelector('input[name="radio"]:checked');
 radio.forEach(radio => {
     radio.addEventListener("change", function() {
@@ -32,15 +32,18 @@ const adina = document.getElementById('adina');
 const balorazioa = document.getElementById('balorazioa');
 
 const bidali = document.getElementById('bidali');
+
 bidali.addEventListener('submit', function() {
     if (adina <= 18 || adina >= 80) {
         console.log("Errorea.");
     } else {
        console.log("Hello."); 
     }
-    balorazioa.addEventListener('input', function (e) {
-       this.value = this.value.replace(/[^0-9]/g, ''); 
-    });
+    balorazioa = (e) => {
+        if (e.key < '0' || e.key > '9') {
+            e.preventDefault();
+        }
+    }
 });
 /*
 let FormEncuesta = document.getElementsByName('FormEncuesta');
