@@ -14,12 +14,16 @@ picture.addEventListener('click', () => {
    picture.src = 'images/paisaje1.jpg';
 }   
 });
-const middle = document.getElementsByClassName('middle');
-middle.addEventListener('mouseenter', () => {
+const middleDiv = document.getElementById('middleDiv');
+middleDiv.addEventListener('mouseenter', () => {
     document.body.style.backgroundColor = 'white';
     document.body.style.color = 'black';
 });
-middle.addEventListener('mouseleave', () => {
+middleDiv.addEventListener('mouseleave', () => {
     document.body.style.backgroundColor = 'black';
     document.body.style.color = 'white';
+});
+const middle = document.getElementsByClassName('middle');
+middle.addEventListener('click', () => {
+
 });
