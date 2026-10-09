@@ -1,0 +1,95 @@
+// PASO 0: Esperar a que la página cargue.
+// Orden: "Ordenador, no empieces a leer este código hasta que se vean todas las fotos en la pantalla".
+document.addEventListener('DOMContentLoaded', () => {
+
+    // ---------------------------------------------------------
+    // PASO 1: PRIMERA FOTO (La de arriba a la izquierda)
+    // ---------------------------------------------------------
+    const img1 = document.getElementById('img1'); // Buscamos la foto 1 en la pantalla
+    
+    // CAUSA: El ratón entra en la foto. 
+    // EFECTO: Cambiamos la imagen por la del pájaro.
+    img1.addEventListener('mouseenter', () => img1.src = "images/animal2.jpg");
+    
+    // CAUSA: El ratón sale de la foto. 
+    // EFECTO: Volvemos a poner la foto original del perro.
+    img1.addEventListener('mouseleave', () => img1.src = "images/animal1.jpg");
+
+
+    // ---------------------------------------------------------
+    // PASO 2: SEGUNDA FOTO (La de arriba a la derecha)
+    // ---------------------------------------------------------
+    const img2 = document.getElementById('img2'); // Buscamos la foto 2 en la pantalla
+    
+    // CAUSA: Hacemos clic izquierdo en la foto. 
+    // EFECTO: Funciona como un interruptor de la luz.
+    img2.addEventListener('click', () => {
+        // PREGUNTA: ¿La foto que se ve ahora mismo es paisaje1?
+        if (img2.src.includes("paisaje1.jpg")) {
+            img2.src = "images/paisaje2.jpg"; // Si es paisaje1, la cambiamos a paisaje2
+        } else {
+            img2.src = "images/paisaje1.jpg"; // Si no lo es, volvemos a paisaje1
+        }
+    });
+
+
+    // ---------------------------------------------------------
+    // PASO 3: LAS 3 FOTOS DEL MEDIO
+    // ---------------------------------------------------------
+    
+    // Este es nuestro diccionario. 
+    // Relaciona el nombre de la foto que tocamos con las 3 fotos nuevas que saldrán abajo.
+    const colecciones = {
+        "animal2.jpg": ["images/animal1.jpg", "images/animal2.jpg", "images/animal3.jpg"],
+        "paisaje2.jpg": ["images/paisaje1.jpg", "images/paisaje2.jpg", "images/paisaje3.jpg"],
+        "persona2.jpg": ["images/persona1.jpg", "images/persona2.jpg", "images/persona3.jpg"]
+    };
+
+    const bottomDiv = document.getElementById('bottomDiv'); // Buscamos la caja vacía de abajo
+
+    // Orden: "Busca todas las fotos del medio. Por cada foto, prepara esto:"
+    for (const foto of document.querySelectorAll('.middle')) {
+        
+        // A) EFECTOS DE COLOR DE FONDO
+        
+        // CAUSA: El ratón entra en la foto. 
+        // EFECTO: El fondo de toda la página se vuelve blanco.
+        foto.addEventListener('mouseenter', () => document.body.className = "blanco");
+        
+        // CAUSA: El ratón sale de la foto. 
+        // EFECTO: El fondo de toda la página vuelve a ser negro.
+        foto.addEventListener('mouseleave', () => document.body.className = "negro");
+
+        // B) EFECTO DE CREAR FOTOS NUEVAS ABAJO
+        
+        // CAUSA: Hacemos clic izquierdo en una foto del medio.
+        // EFECTO: Sigue estos 4 pasos exactos:
+        foto.addEventListener('click', () => {
+            
+            // 1. Vaciamos la caja de abajo para que no se amontonen las fotos.
+            bottomDiv.innerHTML = ""; 
+            
+            // 2. Leemos el nombre de la foto que acabamos de tocar (ejemplo: "animal2.jpg").
+            const nombreArchivo = foto.src.split('/').pop();
+            const grupo = colecciones[nombreArchivo] || [];
+
+            // 3. Orden: "Por cada foto del grupo que hemos elegido, dibújala en pantalla".
+            for (const ruta of grupo) {
+                const nuevaFoto = document.createElement('img'); // Crea la etiqueta de foto
+                nuevaFoto.src = ruta; // Le pone la imagen correcta
+
+                // C) ABRIR VENTANA AL HACER CLIC EN LAS FOTOS NUEVAS
+                // CAUSA: Hacemos clic en una de las fotos de abajo.
+                // EFECTO: Sale un aviso y se abre una ventana flotante para verla en grande.
+                nuevaFoto.addEventListener('click', () => {
+                    alert("hemos hecho click en la imagen");
+                    const ventana = window.open("", "", "width=800,height=600");
+                    ventana.document.write(`<img src="${ruta}" style="max-width:90%;"><br><button onclick="window.close()">Done</button>`);
+                });
+
+                // 4. Pegamos la foto ya terminada dentro de la caja de abajo.
+                bottomDiv.appendChild(nuevaFoto);
+            }
+        });
+    }
+});

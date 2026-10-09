@@ -15,7 +15,7 @@ picture.addEventListener('click', () => {
 }   
 });
 const middleDiv = document.getElementById('middleDiv');
-const middle = document.getElementsByClassName('middle');
+const middle = document.querySelectorAll('middle');
 const bottomDiv = document.getElementById('bottomDiv');
 middleDiv.addEventListener('mouseenter', () => {
     document.body.style.backgroundColor = 'white';
@@ -26,9 +26,9 @@ middleDiv.addEventListener('mouseleave', () => {
     document.body.style.color = 'white';
 });
 const colection = {
-    "images/animal2.jpg": ["animal1.jpg", "animal2.jpg", "animal3.jpg"],
-    "images/paisaje2.jpg": ["paisaje1.jpg", "paisaje2.jpg", "paisaje3.jpg"],
-    "images/persona2.jpg": ["persona1.jpg", "persona2.jpg", "persona3.jpg"]
+    "animal2.jpg": ["animal1.jpg", "animal2.jpg", "animal3.jpg"],
+    "paisaje2.jpg": ["paisaje1.jpg", "paisaje2.jpg", "paisaje3.jpg"],
+    "persona2.jpg": ["persona1.jpg", "persona2.jpg", "persona3.jpg"]
 };
 
 middle.forEach(img => {
@@ -38,10 +38,13 @@ middle.forEach(img => {
         const imageGroup = colection[fileName] || [];
         imageGroup.forEach(route => {
             const newImg = document.createElement('img');
-            newImg.src = route;
+            newImg.src = img + route;
             newImg.addEventListener('click', ()=> {
                 alert("Click egin duzu argazkiari");
+                const ventana = window.open("", "", "width=800,height=600");
+                    ventana.document.write(`<img src="${ruta}" style="max-width:90%;"><br><button onclick="window.close()">Done</button>`);
             });
+            bottomDiv.appendChild(newImg);
         })
     });
 });
