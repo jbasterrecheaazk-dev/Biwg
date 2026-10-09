@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Roster</title>
+    <link href="cards.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+    <h1>Meet Our Team</h1>
+    <div id="team-container" class="cards-container"></div>
+
+    <div id="user-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <img id="modal-img" src="" alt="Profile Picture" style="width:100px; border-radius:50%;">
+            <h2 id="modal-name"></h2>
+            <p><strong>Role:</strong> <span id="modal-role"></span></p>
+            <p><strong>Bio:</strong> <span id="modal-bio"></span></p>
+            <p><strong>Email:</strong> <span id="modal-email"></span></p>
+        </div>
+    </div>
+    <script src="cards.js" type="text/javascript"></script>
+</body>
+</html>
