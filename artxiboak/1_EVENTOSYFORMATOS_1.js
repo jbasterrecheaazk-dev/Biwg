@@ -15,7 +15,7 @@ picture.addEventListener('click', () => {
 }   
 });
 const middleDiv = document.getElementById('middleDiv');
-const middle = document.querySelectorAll('middle');
+const middle = document.getElementsByClassName('.middle');
 const bottomDiv = document.getElementById('bottomDiv');
 middleDiv.addEventListener('mouseenter', () => {
     document.body.style.backgroundColor = 'white';
@@ -42,7 +42,12 @@ middle.forEach(img => {
             newImg.addEventListener('click', ()=> {
                 alert("Click egin duzu argazkiari");
                 const ventana = window.open("", "", "width=800,height=600");
-                    ventana.document.write(`<img src="${ruta}" style="max-width:90%;"><br><button onclick="window.close()">Done</button>`);
+                    ventana.document.write(`
+                        <body style = "text-align:center;">
+                        <img src="${route}" style="max-width:90%;"><br>
+                        <button onclick="window.close()">Done</button>
+                        </body>
+                        `);
             });
             bottomDiv.appendChild(newImg);
         })
