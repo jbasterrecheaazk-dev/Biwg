@@ -37,19 +37,20 @@ middle.forEach(img => {
         const fileName = img.src.split('/').pop();
         const imageGroup = colection[fileName] || [];
         imageGroup.forEach(route => {
+            console.log(route);
             const newImg = document.createElement('img');
-            newImg.src = 'images/' + route;
+            newImg.src = 'images/'+route;
             newImg.addEventListener('click', ()=> {
                 alert("Click egin duzu argazkiari");
                 const ventana = window.open("", "", "width=800,height=600");
                     ventana.document.write(`
                         <body style = "text-align:center;">
-                        <img src="${route}" style="max-width:90%;"><br>
+                        <img src="images/${route}" style="max-width:90%;"><br>
                         <button onclick="window.close()">Done</button>
                         </body>
                         `);
             });
             bottomDiv.appendChild(newImg);
-        })
+        });
     });
 });
