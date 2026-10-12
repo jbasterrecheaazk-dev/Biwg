@@ -1,12 +1,14 @@
 const image = document.getElementById('irudia');
+
 image.addEventListener('mouseenter', () => {
     image.src = "IMG/athletic.png";
 });
 image.addEventListener('mouseleave', () => {
     image.src = "IMG/erreala.png";
 });
+
 const radio = document.querySelectorAll('input[name="radio"]');
-const textop = document.querySelectorAll('textop');
+const textop = document.querySelectorAll('.textop');
 //const formFondo = document.querySelector('input[name="radio"]:checked');
 radio.forEach(radio => {
     radio.addEventListener("change", function() {
