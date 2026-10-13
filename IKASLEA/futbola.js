@@ -12,16 +12,18 @@ const textop = document.querySelectorAll('.textop');
 //const formFondo = document.querySelector('input[name="radio"]:checked');
 radio.forEach(radio => {
     radio.addEventListener("change", function() {
+        
         textop.forEach(textop => {
-             textop.style.textop.fontSize = radio.value + "px";
+            document.textop.style.fontSize = radio.value + "px";
         });
+
         /*
         if (radio.value === "12") {
-           textop.style.textop.fontSize = "12px";
+           document.textop.style.fontSize = "12px";
         } else if (radio.value === "20") {
-            textop.style.textop.fontSize = "20px";
+            document.textop.style.fontSize = "20px";
         } else if (radio.value === "24") {
-            textop.style.textop.fontSize = "24px";
+            document.textop.style.fontSize = "24px";
         } else {
             console.log("Errorea.");
         }
@@ -42,7 +44,6 @@ const bakarrikInt = (e) => {
     };
     if (adina) adina.addEventListener('keypress', bakarrikInt);
     if (balorazioa) balorazioa.addEventListener('keypress', bakarrikInt);
-    if (condition) {
         bidali.addEventListener('submit', function() {
             e.preventDefault();
             let adinaZenbakia = parseInt(
@@ -64,7 +65,6 @@ const bakarrikInt = (e) => {
             };
             alert("Formularioa bidali da..");
         });
-    }
 /*
 let FormEncuesta = document.getElementsByName('FormEncuesta');
 FormEncuesta.addEventListener("click", function() {
