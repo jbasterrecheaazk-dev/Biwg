@@ -58,14 +58,24 @@ const bakarrikInt = (e) => {
                 console.log("Errorea.");
                 return;
             };
-            /*
-            if (isNaN(balorazioZenbakia) || balorazioZenbakia <= 18 || balorazioZenbakia >= 80) {
+            
+            if (isNaN(balorazioZenbakia) || balorazioZenbakia <= 0 || balorazioZenbakia >= 10) {
                 alert("Errorea.");
                 console.log("Errorea.");
                 return;
             };
-            */
-            alert("Formularioa bidali da..");
+            
+            alert("Formularioa bidali da.");
+            const ventana = window.open("", "", "width=800,height=600");
+                    ventana.document.write(`
+                        <body style = "text-align:center;">
+                        <p>
+                        Formularioa bidali da.
+                        </p>
+                        <br>
+                        <button onclick="window.close()">Done</button>
+                        </body>
+                        `);
         });
 /*
 let FormEncuesta = document.getElementsByName('FormEncuesta');
