@@ -52,7 +52,7 @@ const bakarrikInt = (e) => {
             let balorazioZenbakia = parseInt(
                 balorazioa.value, 10
             );
-            ('return').
+            //('return').
             if (isNaN(adinaZenbakia) || adinaZenbakia <= 18 || adinaZenbakia >= 80) {
                 alert("Errorea.");
                 console.log("Errorea.");
