@@ -58,11 +58,13 @@ const bakarrikInt = (e) => {
                 console.log("Errorea.");
                 return;
             };
+            /*
             if (isNaN(balorazioZenbakia) || balorazioZenbakia <= 18 || balorazioZenbakia >= 80) {
                 alert("Errorea.");
                 console.log("Errorea.");
                 return;
             };
+            */
             alert("Formularioa bidali da..");
         });
 /*
