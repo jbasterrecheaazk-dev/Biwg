@@ -46,7 +46,9 @@ const bigDogs = [
     </h2>
     </a>
     <h1></h1>
+    /*
     <button onclick="window.close()">Done</button>
+    */
     </div>`;
     console.log(div1);
   });
@@ -60,7 +62,9 @@ const bigDogs = [
     </h2>
     </a>
     <h1></h1>
+    /*
     <button onclick="window.close()">Done</button>
+    */
     </div>`;
     console.log(div2);
   });
