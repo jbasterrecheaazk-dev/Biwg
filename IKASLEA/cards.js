@@ -38,6 +38,7 @@ const bigDogs = [
   div1 = ``;
   div2 = ``;
   bigDogs.forEach((dog,index) => {
+    document.cards.style.height = '100px';
     div1 = `<div class="cards">
     <a href="details.html?id=${index}">
     <img src = "${dog.image}" alt = "${dog.breed}">
