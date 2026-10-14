@@ -49,3 +49,4 @@ const bigDogs = [
     </div>`;
     console.log(div1);
   });
+  cards2.innerHTML = div1;
