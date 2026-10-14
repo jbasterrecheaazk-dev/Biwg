@@ -33,3 +33,18 @@ const bigDogs = [
     characteristics: "Calm, playful and an excellent companion.",
     suitableOwners: "Ideal for apartment living and calm people."
   }];
+  const cards1 = document.getElementById('container-cards1');
+  const cards2 = document.getElementById('container-cards2');
+  div1 = ``;
+  bigDogs.forEach((dog,index) => {
+    div1 = `<div class="cards">
+    <a href="details.html?id=${index}">
+    <img src = "${dog.image}" alt = "${dog.breed}">
+    <h2>
+    ${dog.breed}
+    </h2>
+    </a>
+    <h1></h1>
+    <button onclick="window.close()">Done</button>
+    </div>`;
+  });
