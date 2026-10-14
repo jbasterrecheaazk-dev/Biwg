@@ -36,8 +36,8 @@ const bigDogs = [
 ];
   const cards1 = document.getElementById('container-cards1');
   const cards2 = document.getElementById('container-cards2');
-  div1 = ``;
-  div2 = ``;
+  div1 = "";
+  div2 = "";
   bigDogs.forEach((dog,index) => {
     /*
     document.cards.style.height = '100px';
