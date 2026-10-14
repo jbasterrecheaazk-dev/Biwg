@@ -38,13 +38,13 @@ const bigDogs = [
   const cards2 = document.getElementById('container-cards2');
   div1 = "";
   div2 = "";
-  cards1.style.maxWidth = '80%';
+  cards1.style.maxWidth = "300px";
   
-  cards1.style.maxHeight = '300px';
+  cards1.style.maxHeight = "300px";
   
-  cards2.style.maxWidth = '80%';
+  cards2.style.maxWidth = "300px";
   
-  cards2.style.maxHeight = '300px';
+  cards2.style.maxHeight = "300px";
   
   bigDogs.forEach((dog,index) => {
     /*
