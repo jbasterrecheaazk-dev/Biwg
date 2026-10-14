@@ -38,11 +38,11 @@ const bigDogs = [
   const cards2 = document.getElementById('container-cards2');
   div1 = "";
   div2 = "";
-  document.cards1.style.maxWidth = '80%';
+  cards1.style.maxWidth = '80%';
   
   cards1.style.maxHeight = '300px';
   
-  document.cards2.style.maxWidth = '80%';
+  cards2.style.maxWidth = '80%';
   
   cards2.style.maxHeight = '300px';
   
