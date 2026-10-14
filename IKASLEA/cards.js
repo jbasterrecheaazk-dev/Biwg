@@ -38,6 +38,7 @@ const bigDogs = [
   const cards2 = document.getElementById('container-cards2');
   div1 = "";
   div2 = "";
+  cards1.style.margin = "auto";
   cards1.style.maxWidth = "300px";
   
   cards1.style.maxHeight = "300px";
