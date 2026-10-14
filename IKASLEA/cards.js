@@ -38,6 +38,10 @@ const bigDogs = [
   const cards2 = document.getElementById('container-cards2');
   div1 = "";
   div2 = "";
+  cards1.style.width = '100px';
+  cards1.style.height = '100px';
+  cards2.style.width = '100px';
+  cards2.style.height = '100px';
   bigDogs.forEach((dog,index) => {
     /*
     document.cards.style.height = '100px';
@@ -61,8 +65,9 @@ const bigDogs = [
     ${dog.breed}
     </h2>
     </a>
-    <h1></h1>
-    
+    <h1>
+
+    </h1>
     </div>`;
     console.log(div2);
   });
