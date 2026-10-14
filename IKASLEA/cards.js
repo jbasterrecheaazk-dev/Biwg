@@ -38,15 +38,22 @@ const bigDogs = [
   const cards2 = document.getElementById('container-cards2');
   div1 = "";
   div2 = "";
+  cards1.style.border = "solid";
+  cards1.style.display = "flex";
+  cards1.style.flexDirection = "row";
+  cards1.style.justifyContent = "space-between";
   cards1.style.margin = "auto";
-  cards1.style.maxWidth = "300px";
-  
-  cards1.style.maxHeight = "300px";
-  
+  cards1.style.flexWrap = "wrap";
+  cards1.style.width = "300px";
+  cards1.style.height = "200px";
+  /*
+  cards1.style.margin = "auto";
+  cards1.style.maxWidth = "30em";
+  cards1.style.maxHeight = "20em";
+  cards2.style.margin = "auto";
   cards2.style.maxWidth = "300px";
-  
   cards2.style.maxHeight = "300px";
-  
+  */
   bigDogs.forEach((dog,index) => {
     /*
     document.cards.style.height = '100px';
