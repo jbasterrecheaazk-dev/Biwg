@@ -38,10 +38,10 @@ const bigDogs = [
   const cards2 = document.getElementById('container-cards2');
   div1 = "";
   div2 = "";
-  cards1.style.maxWidth = '100%';
-  cards1.style.maxHeight = '100%';
-  cards2.style.maxWidth = '100%';
-  cards2.style.maxHeight = '100%';
+  cards1.style.maxWidth = '100px';
+  cards1.style.maxHeight = '100px';
+  cards2.style.maxWidth = '100px';
+  cards2.style.maxHeight = '100px';
   bigDogs.forEach((dog,index) => {
     /*
     document.cards.style.height = '100px';
