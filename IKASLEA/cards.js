@@ -42,15 +42,14 @@ const bigDogs = [
     /*
     document.cards.style.height = '100px';
     */
-    div1 = `<div class="cards">
+    divs1 = `<div class="cards">
     <a href="details.html?id=${index}">
     <img src = "${dog.image}" alt = "${dog.breed}">
-    <h2>
-    ${dog.breed}
-    </h2>
+    <h2>${dog.breed}</h2>
     </a>
     <h1></h1>
     </div>`;
+    div1 = div1 + divs1;
     console.log(div1);
   });
   cards2.innerHTML = div1;
