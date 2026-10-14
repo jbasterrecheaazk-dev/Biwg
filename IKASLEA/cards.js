@@ -47,4 +47,5 @@ const bigDogs = [
     <h1></h1>
     <button onclick="window.close()">Done</button>
     </div>`;
+    console.log(div1);
   });
