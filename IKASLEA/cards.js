@@ -32,7 +32,8 @@ const bigDogs = [
     height: "28 - 33 cm",
     characteristics: "Calm, playful and an excellent companion.",
     suitableOwners: "Ideal for apartment living and calm people."
-  }];
+  }
+];
   const cards1 = document.getElementById('container-cards1');
   const cards2 = document.getElementById('container-cards2');
   div1 = ``;
