@@ -36,6 +36,7 @@ const bigDogs = [
   const cards1 = document.getElementById('container-cards1');
   const cards2 = document.getElementById('container-cards2');
   div1 = ``;
+  div2 = ``;
   bigDogs.forEach((dog,index) => {
     div1 = `<div class="cards">
     <a href="details.html?id=${index}">
@@ -50,3 +51,17 @@ const bigDogs = [
     console.log(div1);
   });
   cards2.innerHTML = div1;
+  smallDogs.forEach((dog,index) => {
+    div2 = `<div class="cards">
+    <a href="details.html?id=${index}">
+    <img src = "${dog.image}" alt = "${dog.breed}">
+    <h2>
+    ${dog.breed}
+    </h2>
+    </a>
+    <h1></h1>
+    <button onclick="window.close()">Done</button>
+    </div>`;
+    console.log(div2);
+  });
+    cards1.innerHTML = div2;
