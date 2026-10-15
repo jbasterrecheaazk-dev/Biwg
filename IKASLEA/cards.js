@@ -36,26 +36,11 @@ const bigDogs = [
 ];
   const cards1 = document.getElementById('container-cards1');
   const cards2 = document.getElementById('container-cards2');
+  cards = "";
+  
+  /*
   div1 = "";
   div2 = "";
-  cards1.style.border = "solid";
-  cards1.style.display = "flex";
-  cards1.style.flexDirection = "row";
-  cards1.style.justifyContent = "space-between";
-  cards1.style.margin = "auto";
-  cards1.style.flexWrap = "wrap";
-  cards1.style.width = "300px";
-  cards1.style.height = "200px";
-
-  cards2.style.border = "solid";
-  cards2.style.display = "flex";
-  cards2.style.flexDirection = "row";
-  cards2.style.justifyContent = "space-between";
-  cards2.style.margin = "auto";
-  cards2.style.flexWrap = "wrap";
-  cards2.style.width = "300px";
-  cards2.style.height = "200px";
-  /*
   cards1.style.margin = "auto";
   cards1.style.maxWidth = "30em";
   cards1.style.maxHeight = "20em";
@@ -67,19 +52,18 @@ const bigDogs = [
     /*
     document.cards.style.height = '100px';
     */
-    divs1 = `<div class="cards">
+    cards = `<div class="card">
     <a href="details.html?id=${index}">
     <img src = "${dog.image}" alt = "${dog.breed}">
     <h2>${dog.breed}</h2>
     </a>
-    <h1></h1>
     </div>`;
-    div1 = div1 + divs1;
-    console.log(div1);
+    cards = cards + card;
+    console.log(cards);
   });
   cards2.innerHTML = div1;
   smallDogs.forEach((dog,index) => {
-    div2 = `<div class="cards">
+    cards = `<div class="cards">
     <a href="details.html?id=${index}">
     <img src = "${dog.image}" alt = "${dog.breed}">
     <h2>
@@ -96,3 +80,20 @@ const bigDogs = [
     <button onclick="window.close()">Done</button>
     */
     cards1.innerHTML = div2;
+    cards1.style.border = "solid";
+  cards1.style.display = "flex";
+  cards1.style.flexDirection = "row";
+  cards1.style.justifyContent = "space-between";
+  cards1.style.margin = "auto";
+  cards1.style.flexWrap = "wrap";
+  cards1.style.width = "300px";
+  cards1.style.height = "200px";
+
+  cards2.style.border = "solid";
+  cards2.style.display = "flex";
+  cards2.style.flexDirection = "row";
+  cards2.style.justifyContent = "space-between";
+  cards2.style.margin = "auto";
+  cards2.style.flexWrap = "wrap";
+  cards2.style.width = "300px";
+  cards2.style.height = "200px";
