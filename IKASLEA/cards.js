@@ -48,52 +48,32 @@ const bigDogs = [
   cards2.style.maxWidth = "300px";
   cards2.style.maxHeight = "300px";
   */
-  bigDogs.forEach((dog,index) => {
+  smallDogs.forEach((dog,index) => {
     /*
     document.cards.style.height = '100px';
     */
-    cards = `<div class="card">
+    card = `<div class="card">
     <a href="details.html?id=${index}">
-    <img src = "${dog.image}" alt = "${dog.breed}">
+    <img src="${dog.image}" alt ="${dog.breed}">
     <h2>${dog.breed}</h2>
     </a>
     </div>`;
     cards = cards + card;
     console.log(cards);
   });
-  container2.innerHTML = cards;
-  smallDogs.forEach((dog,index) => {
+  container1.innerHTML=cards;
+
+  bigDogs.forEach((dog,index) => {
     cards = `<div class="cards">
-    <a href="details.html?id=${index}">
-    <img src = "${dog.image}" alt = "${dog.breed}">
-    <h2>
-    ${dog.breed}
-    </h2>
-    </a>
-    <h1>
-
-    </h1>
-    </div>`;
-    console.log(div2);
-  });
-  /*
-    <button onclick="window.close()">Done</button>
-    */
-    cards1.innerHTML = div2;
-    cards1.style.border = "solid";
-  cards1.style.display = "flex";
-  cards1.style.flexDirection = "row";
-  cards1.style.justifyContent = "space-between";
-  cards1.style.margin = "auto";
-  cards1.style.flexWrap = "wrap";
-  cards1.style.width = "300px";
-  cards1.style.height = "200px";
-
-  cards2.style.border = "solid";
-  cards2.style.display = "flex";
-  cards2.style.flexDirection = "row";
-  cards2.style.justifyContent = "space-between";
-  cards2.style.margin = "auto";
-  cards2.style.flexWrap = "wrap";
-  cards2.style.width = "300px";
-  cards2.style.height = "200px";
+   const card = document.createElement("div");
+   card.classList.add("card");
+   card.innerHtml =`
+   <img src="${dog.image}" alt ="${dog.breed}">
+    <h2>${dog.breed}</h2>;
+    card.addeventListener("click", () => {
+      window.open(`details.html?id=${index}`, "_blank",
+        "width=600,height=600,left=200,top=200,resizable=yes"
+      );
+    });
+     container2.appendChild(card);
+     });
