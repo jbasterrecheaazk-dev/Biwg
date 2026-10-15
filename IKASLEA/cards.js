@@ -34,8 +34,8 @@ const bigDogs = [
     suitableOwners: "Ideal for apartment living and calm people."
   }
 ];
-  const cards1 = document.getElementById('container-cards1');
-  const cards2 = document.getElementById('container-cards2');
+  const container1 = document.getElementById('container-cards1');
+  const container2 = document.getElementById('container-cards2');
   cards = "";
   
   /*
@@ -61,7 +61,7 @@ const bigDogs = [
     cards = cards + card;
     console.log(cards);
   });
-  cards2.innerHTML = div1;
+  container2.innerHTML = cards;
   smallDogs.forEach((dog,index) => {
     cards = `<div class="cards">
     <a href="details.html?id=${index}">
