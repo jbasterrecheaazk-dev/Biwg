@@ -40,8 +40,7 @@ function estiloakEman(elementua) {
   elementua.style.border = "solid 1px #ccc";
   elementua.style.display = "flex";
   elementua.style.flexDirection = "row";
-  //Hauxe aldatu dut. space-star 
-  elementua.style.justifyContent = "space-start";
+  elementua.style.justifyContent = "space-between";
   elementua.style.margin = "auto";
   elementua.style.flexWrap = "wrap";
   elementua.style.maxWidth = "100%"; 
