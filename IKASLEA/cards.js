@@ -34,46 +34,48 @@ const bigDogs = [
     suitableOwners: "Ideal for apartment living and calm people."
   }
 ];
-  const container1 = document.getElementById('container-cards1');
-  const container2 = document.getElementById('container-cards2');
-  cards = "";
-  
-  /*
-  div1 = "";
-  div2 = "";
-  cards1.style.margin = "auto";
-  cards1.style.maxWidth = "30em";
-  cards1.style.maxHeight = "20em";
-  cards2.style.margin = "auto";
-  cards2.style.maxWidth = "300px";
-  cards2.style.maxHeight = "300px";
-  */
+const container1 = document.getElementById('container-cards1');
+const container2 = document.getElementById('container-cards2');
+function estiloakEman(elementua) {
+  elementua.style.border = "solid 1px #ccc";
+  elementua.style.display = "flex";
+  elementua.style.flexDirection = "row";
+  //Hauxe aldatu dut. space-star 
+  elementua.style.justifyContent = "space-start";
+  elementua.style.margin = "auto";
+  elementua.style.flexWrap = "wrap";
+  elementua.style.maxWidth = "100%"; 
+  elementua.style.gap = "10px";
+  elementua.style.padding = "10px";
+}
+
+estiloakEman(container1);
+estiloakEman(container2);
+
+let htmlsmallDogs = "";
+let htmlbigDogs = "";
+
   smallDogs.forEach((dog,index) => {
     /*
     document.cards.style.height = '100px';
     */
-    card = `<div class="card">
-    <a href="details.html?id=${index}">
-    <img src="${dog.image}" alt ="${dog.breed}">
+    htmlsmallDogs += `
+    <div class="card">
+    <a href="details.html? type=small&id=${index}">
+    <img src="${dog.image}" alt ="${dog.breed}" style = "">
     <h2>${dog.breed}</h2>
     </a>
-    </div>`;
-    cards = cards + card;
-    console.log(cards);
+    </div> `;
   });
-  container1.innerHTML=cards;
 
   bigDogs.forEach((dog,index) => {
-    cards = `<div class="cards">
-   const card = document.createElement("div");
-   card.classList.add("card");
-   card.innerHtml =`
-   <img src="${dog.image}" alt ="${dog.breed}">
-    <h2>${dog.breed}</h2>;
-    card.addeventListener("click", () => {
-      window.open(`details.html?id=${index}`, "_blank",
-        "width=600,height=600,left=200,top=200,resizable=yes"
-      );
-    });
-     container2.appendChild(card);
-     });
+    htmlbigDogs += `
+    <div class="card">
+    <a href="details.html? type=big&id=${index}">
+    <img src="${dog.image}" alt ="${dog.breed}" style = "">
+    <h2>${dog.breed}</h2>
+    </a>
+    </div> `;
+  });
+  container1.innerHTML = htmlsmallDogs;
+  container2.innerHTML = htmlbigDogs;
