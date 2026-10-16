@@ -40,7 +40,7 @@ function estiloakEman(elementua) {
   elementua.style.border = "solid 1px #ccc";
   elementua.style.display = "flex";
   elementua.style.flexDirection = "row";
-  elementua.style.justifyContent = "space-between";
+  elementua.style.justifyContent = "space-start";
   elementua.style.margin = "auto";
   elementua.style.flexWrap = "wrap";
   elementua.style.maxWidth = "100%"; 
@@ -59,7 +59,7 @@ let htmlbigDogs = "";
     document.cards.style.height = '100px';
     */
     htmlsmallDogs += `
-    <div class="card">
+    <div class="card" style = "text-align: center;">
     <a href="details.html? type=small&id=${index}">
     <img src="${dog.image}" alt ="${dog.breed}" style = "">
     <h2>${dog.breed}</h2>
@@ -69,7 +69,7 @@ let htmlbigDogs = "";
 
   bigDogs.forEach((dog,index) => {
     htmlbigDogs += `
-    <div class="card">
+    <div class="card" style = "text-align: center;">
     <a href="details.html? type=big&id=${index}">
     <img src="${dog.image}" alt ="${dog.breed}" style = "">
     <h2>${dog.breed}</h2>
