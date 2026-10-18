@@ -34,12 +34,42 @@ const bigDogs = [
     suitableOwners: "Ideal for apartment living and calm people."
   }
 ];
-/*
+
 const details = document.getElementById('dog-details');
 
-details.fore*/
+alert (window.location.href);
 
-
+let dog1 = `
+    <div id="dog-details">
+    <a href="details.html? type=small&id=${index}">
+    <p>ppp</p>
+    <img src="${dog.image}" alt ="${dog.breed}" style = "">
+    <h2>${dog.breed}</h2>
+    </a>
+    </div> `;
+let dog2 = `
+    <div id="dog-details">
+    <a href="details.html? type=small&id=${index}">
+    <img src="${dog.image}" alt ="${dog.breed}" style = "">
+    <h2>${dog.breed}</h2>
+    </a>
+    </div> `;
+let dog3 = `
+    <div id="dog-details">
+    <a href="details.html? type=small&id=${index}">
+    <img src="${dog.image}" alt ="${dog.breed}" style = "">
+    <h2>${dog.breed}</h2>
+    </a>
+    </div> `;
+let dog4 = `
+    <div id="dog-details">
+    <a href="details.html? type=small&id=${index}">
+    <img src="${dog.image}" alt ="${dog.breed}" style = "">
+    <h2>${dog.breed}</h2>
+    </a>
+    </div> `;
+details.innerHTML = dog1;
+/*
 const container1 = document.getElementById('container-cards1');
 const container2 = document.getElementById('container-cards2');
 function estiloakEman(elementua) {
@@ -83,3 +113,4 @@ let htmlbigDogs = "";
   });
   container1.innerHTML = htmlsmallDogs;
   container2.innerHTML = htmlbigDogs;
+  */
