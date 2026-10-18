@@ -34,10 +34,12 @@ const bigDogs = [
     suitableOwners: "Ideal for apartment living and calm people."
   }
 ];
-
-
-
 /*
+const details = document.getElementById('dog-details');
+
+details.fore*/
+
+
 const container1 = document.getElementById('container-cards1');
 const container2 = document.getElementById('container-cards2');
 function estiloakEman(elementua) {
@@ -81,4 +83,3 @@ let htmlbigDogs = "";
   });
   container1.innerHTML = htmlsmallDogs;
   container2.innerHTML = htmlbigDogs;
-  */
