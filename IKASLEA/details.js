@@ -39,36 +39,49 @@ const details = document.getElementById('dog-details');
 
 alert (window.location.href);
 
-let dog1 = `
-    <div id="dog-details">
-    <a href="details.html? type=small&id=${index}">
-    <p>ppp</p>
-    <img src="${dog.image}" alt ="${dog.breed}" style = "">
-    <h2>${dog.breed}</h2>
-    </a>
-    </div> `;
-let dog2 = `
-    <div id="dog-details">
-    <a href="details.html? type=small&id=${index}">
-    <img src="${dog.image}" alt ="${dog.breed}" style = "">
-    <h2>${dog.breed}</h2>
-    </a>
-    </div> `;
-let dog3 = `
+let dog1 = "";
+let dog2 = "";
+let dog3 = "";
+let dog4 = "";
+
+bigDogs.forEach((dog, index) => {
+  dog1 += `
     <div id="dog-details">
     <a href="details.html? type=small&id=${index}">
     <img src="${dog.image}" alt ="${dog.breed}" style = "">
     <h2>${dog.breed}</h2>
     </a>
     </div> `;
-let dog4 = `
+});
+bigDogs.forEach((dog, index) => {
+  dog2 += `
     <div id="dog-details">
     <a href="details.html? type=small&id=${index}">
     <img src="${dog.image}" alt ="${dog.breed}" style = "">
     <h2>${dog.breed}</h2>
     </a>
     </div> `;
-details.innerHTML = dog1;
+});
+bigDogs.forEach((dog, index) => {
+  dog3 += `
+    <div id="dog-details">
+    <a href="details.html? type=small&id=${index}">
+    <img src="${dog.image}" alt ="${dog.breed}" style = "">
+    <h2>${dog.breed}</h2>
+    </a>
+    </div> `;
+});
+smallDogs.forEach((dog, index) => {
+  dog4 += `
+    <div id="dog-details">
+    <a href="details.html? type=small&id=${index}">
+    <img src="${dog.image}" alt ="${dog.breed}" style = "">
+    <h2>${dog.breed}</h2>
+    </a>
+    </div> `;
+});
+
+details.innerHTML = dog3;
 /*
 const container1 = document.getElementById('container-cards1');
 const container2 = document.getElementById('container-cards2');
