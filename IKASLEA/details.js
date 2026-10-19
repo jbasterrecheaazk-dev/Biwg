@@ -39,6 +39,20 @@ const details = document.getElementById('dog-details');
 
 alert (window.location.href);
 
+function estiloajarri(elementua) {
+  elementua.style.border = "solid 1px #ccc";
+  elementua.style.display = "flex";
+  elementua.style.flexDirection = "row";
+  elementua.style.justifyContent = "space-start";
+  elementua.style.margin = "auto";
+  elementua.style.flexWrap = "wrap";
+  elementua.style.maxWidth = "100%"; 
+  elementua.style.gap = "10px";
+  elementua.style.padding = "10px";
+}
+
+estiloajarri(details);
+
 let dog1 = "";
 let dog2 = "";
 let dog3 = "";
@@ -46,7 +60,7 @@ let dog4 = "";
 
 bigDogs.forEach((dog, index) => {
   dog1 += `
-    <div id="dog-details">
+    <div id="dog-details" style = "text-align: center;>
     <a href="details.html? type=small&id=${index}">
     <img src="${dog.image}" alt ="${dog.breed}" style = "">
     <h2>${dog.breed}</h2>
@@ -55,7 +69,7 @@ bigDogs.forEach((dog, index) => {
 });
 bigDogs.forEach((dog, index) => {
   dog2 += `
-    <div id="dog-details">
+    <div id="dog-details" style = "text-align: center;>
     <a href="details.html? type=small&id=${index}">
     <img src="${dog.image}" alt ="${dog.breed}" style = "">
     <h2>${dog.breed}</h2>
@@ -64,7 +78,7 @@ bigDogs.forEach((dog, index) => {
 });
 bigDogs.forEach((dog, index) => {
   dog3 += `
-    <div id="dog-details">
+    <div id="dog-details" style = "text-align: center;>
     <a href="details.html? type=small&id=${index}">
     <img src="${dog.image}" alt ="${dog.breed}" style = "">
     <h2>${dog.breed}</h2>
@@ -73,7 +87,7 @@ bigDogs.forEach((dog, index) => {
 });
 smallDogs.forEach((dog, index) => {
   dog4 += `
-    <div id="dog-details">
+    <div id="dog-details" style = "text-align: center;>
     <a href="details.html? type=small&id=${index}">
     <img src="${dog.image}" alt ="${dog.breed}" style = "">
     <h2>${dog.breed}</h2>
@@ -81,7 +95,7 @@ smallDogs.forEach((dog, index) => {
     </div> `;
 });
 
-details.innerHTML = dog3;
+details.innerHTML = dog4;
 /*
 const container1 = document.getElementById('container-cards1');
 const container2 = document.getElementById('container-cards2');
