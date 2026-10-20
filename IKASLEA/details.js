@@ -38,6 +38,9 @@ const bigDogs = [
 const details = document.getElementById('dog-details');
 
 alert (window.location.href);
+const linkId = 'window.location.href';
+
+console.log(linkId);
 
 function estiloajarri(elementua) {
   elementua.style.border = "solid 1px #ccc";
@@ -57,7 +60,11 @@ let dog1 = "";
 let dog2 = "";
 let dog3 = "";
 let dog4 = "";
-
+/*
+if (window.location.href = ) {
+  
+}
+*/
 bigDogs.forEach((dog, index) => {
   dog1 += `
     <div id="dog-details" style = "text-align: center;>
