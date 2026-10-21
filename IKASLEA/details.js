@@ -38,8 +38,15 @@ const bigDogs = [
 const details = document.getElementById('dog-details');
 
 const linkId = new URLSearchParams(window.location.search);
+/*
 console.log(linkId);
 alert (linkId);
+*/
+
+const type = linkId.get('type');
+const id = linkId.get('id');
+alert (type);
+alert (id);
 
 function estiloajarri(elementua) {
   elementua.style.border = "solid 1px #ccc";
@@ -97,16 +104,16 @@ smallDogs.forEach((dog, index) => {
     </div> `;
 });
 
-if (linkId.has(type = 'small' && id === '0')) {
+if (type = 'small' && id === '0') {
 details.innerHTML = dog4;
 }
-if (linkId.has(type = 'big' && id === '0')) {
+if (type = 'big' && id === '0') {
 details.innerHTML = dog3;
 }
-if (linkId.has(type = 'big' && id === '1')) {
+if (type = 'big' && id === '1') {
 details.innerHTML = dog2;
 }
-if (linkId.has(type = 'big' && id === '2')) {
+if (type = 'big' && id === '2') {
 details.innerHTML = dog1;
 }
 
