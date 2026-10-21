@@ -37,10 +37,9 @@ const bigDogs = [
 
 const details = document.getElementById('dog-details');
 
-alert (window.location.href);
-const linkId = 'window.location.href';
-
+const linkId = new URLSearchParams(window.location.search);
 console.log(linkId);
+alert (linkId);
 
 function estiloajarri(elementua) {
   elementua.style.border = "solid 1px #ccc";
@@ -60,15 +59,11 @@ let dog1 = "";
 let dog2 = "";
 let dog3 = "";
 let dog4 = "";
-/*
-if (window.location.href = ) {
-  
-}
-*/
+
 bigDogs.forEach((dog, index) => {
   dog1 += `
     <div id="dog-details" style = "text-align: center;>
-    <a href="details.html? type=small&id=${index}">
+    <a href="details.html? type=big&id=${index}">
     <img src="${dog.image}" alt ="${dog.breed}" style = "">
     <h2>${dog.breed}</h2>
     </a>
@@ -77,7 +72,7 @@ bigDogs.forEach((dog, index) => {
 bigDogs.forEach((dog, index) => {
   dog2 += `
     <div id="dog-details" style = "text-align: center;>
-    <a href="details.html? type=small&id=${index}">
+    <a href="details.html? type=big&id=${index}">
     <img src="${dog.image}" alt ="${dog.breed}" style = "">
     <h2>${dog.breed}</h2>
     </a>
@@ -86,7 +81,7 @@ bigDogs.forEach((dog, index) => {
 bigDogs.forEach((dog, index) => {
   dog3 += `
     <div id="dog-details" style = "text-align: center;>
-    <a href="details.html? type=small&id=${index}">
+    <a href="details.html? type=big&id=${index}">
     <img src="${dog.image}" alt ="${dog.breed}" style = "">
     <h2>${dog.breed}</h2>
     </a>
@@ -102,7 +97,20 @@ smallDogs.forEach((dog, index) => {
     </div> `;
 });
 
+if (linkId.has(type = 'small' && id === '0')) {
 details.innerHTML = dog4;
+}
+if (linkId.has(type = 'big' && id === '0')) {
+details.innerHTML = dog3;
+}
+if (linkId.has(type = 'big' && id === '1')) {
+details.innerHTML = dog2;
+}
+if (linkId.has(type = 'big' && id === '2')) {
+details.innerHTML = dog1;
+}
+
+
 /*
 const container1 = document.getElementById('container-cards1');
 const container2 = document.getElementById('container-cards2');
