@@ -37,15 +37,24 @@ const bigDogs = [
 
 const details = document.getElementById('dog-details');
 
-const linkId = new URLSearchParams(window.location.search);
+//const linkId = new URLSearchParams(window.location.search);
+const url = window.location.href;
+const paramS = url.split('?')[1];
+const paramA = paramS.split('&');
+const param = {};
+paramA.forEach(param => {
+  const [key, value] = param.split('=');
+  param[key] = value;
+});
 /*
 console.log(linkId);
 alert (linkId);
 */
-
-const type = linkId.get('type');
-const id = linkId.get('id');
+const type = param.type;
+const id = param.id;
+console.log(type);
 alert (type);
+console.log(id);
 alert (id);
 
 function estiloajarri(elementua) {
@@ -104,16 +113,16 @@ smallDogs.forEach((dog, index) => {
     </div> `;
 });
 
-if (type = 'small' && id === '0') {
+if (type === 'small' && id === '0') {
 details.innerHTML = dog4;
 }
-if (type = 'big' && id === '0') {
+if (type === 'big' && id === '0') {
 details.innerHTML = dog3;
 }
-if (type = 'big' && id === '1') {
+if (type === 'big' && id === '1') {
 details.innerHTML = dog2;
 }
-if (type = 'big' && id === '2') {
+if (type === 'big' && id === '2') {
 details.innerHTML = dog1;
 }
 
