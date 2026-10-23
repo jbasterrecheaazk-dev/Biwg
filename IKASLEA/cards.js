@@ -60,7 +60,7 @@ let htmlbigDogs = "";
     */
     htmlsmallDogs += `
     <div class="card" style = "text-align: center;">
-    <a href="details.html? type=small&id=${index}">
+    <a href="details.html?type=small&id=${index}">
     <img src="${dog.image}" alt ="${dog.breed}" style = "">
     <h2>${dog.breed}</h2>
     </a>
@@ -70,7 +70,7 @@ let htmlbigDogs = "";
   bigDogs.forEach((dog,index) => {
     htmlbigDogs += `
     <div class="card" style = "text-align: center;">
-    <a href="details.html? type=big&id=${index}">
+    <a href="details.html?type=big&id=${index}">
     <img src="${dog.image}" alt ="${dog.breed}" style = "">
     <h2>${dog.breed}</h2>
     </a>
