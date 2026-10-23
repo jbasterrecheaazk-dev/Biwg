@@ -37,7 +37,8 @@ const bigDogs = [
 
 const details = document.getElementById('dog-details');
 
-//const linkId = new URLSearchParams(window.location.search);
+const linkId = new URLSearchParams(window.location.search);
+/*
 const url = window.location.href;
 const paramS = url.split('?')[1];
 const paramA = paramS.split('&');
@@ -50,8 +51,8 @@ paramA.forEach(param => {
 console.log(linkId);
 alert (linkId);
 */
-const type = param.type;
-const id = param.id;
+const type = linkId.get('type');
+const id = linkId.get('id');
 console.log(type);
 alert (type);
 console.log(id);
