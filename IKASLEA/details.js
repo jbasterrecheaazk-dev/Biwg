@@ -47,7 +47,7 @@ paramA.forEach(param => {
   const [key, value] = param.split('=');
   param[key] = value;
 });
-/*
+
 console.log(linkId);
 alert (linkId);
 */
@@ -80,8 +80,8 @@ let dog4 = "";
 bigDogs.forEach((dog, index) => {
   dog1 += `
     <div id="dog-details" style = "text-align: center;>
-    <a href="details.html? type=big&id=${index}">
-    <img src="${dog.image}" alt ="${dog.breed}" style = "">
+    <a href="details.html?type=big&id=${index}">
+    <img src="${dog.image}" alt ="${dog.breed}" style = "Width = "100px"">
     <h2>${dog.breed}</h2>
     </a>
     </div> `;
@@ -89,8 +89,8 @@ bigDogs.forEach((dog, index) => {
 bigDogs.forEach((dog, index) => {
   dog2 += `
     <div id="dog-details" style = "text-align: center;>
-    <a href="details.html? type=big&id=${index}">
-    <img src="${dog.image}" alt ="${dog.breed}" style = "">
+    <a href="details.html?type=big&id=${index}">
+    <img src="${dog.image}" alt ="${dog.breed}" style = "Width = "100px"">
     <h2>${dog.breed}</h2>
     </a>
     </div> `;
@@ -98,8 +98,8 @@ bigDogs.forEach((dog, index) => {
 bigDogs.forEach((dog, index) => {
   dog3 += `
     <div id="dog-details" style = "text-align: center;>
-    <a href="details.html? type=big&id=${index}">
-    <img src="${dog.image}" alt ="${dog.breed}" style = "">
+    <a href="details.html?type=big&id=${index}">
+    <img src="${dog.image}" alt ="${dog.breed}" style = "Width = "100px"">
     <h2>${dog.breed}</h2>
     </a>
     </div> `;
@@ -107,8 +107,8 @@ bigDogs.forEach((dog, index) => {
 smallDogs.forEach((dog, index) => {
   dog4 += `
     <div id="dog-details" style = "text-align: center;>
-    <a href="details.html? type=small&id=${index}">
-    <img src="${dog.image}" alt ="${dog.breed}" style = "">
+    <a href="details.html?type=small&id=${index}">
+    <img src="${dog.image}" alt ="${dog.breed}" style = "Width = "100px"">
     <h2>${dog.breed}</h2>
     </a>
     </div> `;
