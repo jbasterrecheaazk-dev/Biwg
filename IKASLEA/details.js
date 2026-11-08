@@ -1,12 +1,24 @@
 const bigDogs = [
   {
+    breed: "Siberian Husky",
+    image: "https://images.unsplash.com/photo-1605568427561-40dd23c2acea",
+    weight: "20 - 27 kg",
+    height: "50 - 60 cm",
+    characteristics: "Energetic, independent and resilient.",
+    suitableOwners: "Perfect for very active people and sports lovers."
+  }];
+
+const bigDogs2 = [
+  {
     breed: "Golden Retriever",
     image: "https://images.unsplash.com/photo-1552053831-71594a27632d",
     weight: "25 - 34 kg",
     height: "55 - 61 cm",
     characteristics: "Intelligent, friendly, affectionate and very sociable.",
     suitableOwners: "Ideal for families with children and active people."
-  },
+  }];
+
+const bigDogs3 = [
    {
     breed: "German Shepherd",
     image: "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95",
@@ -14,14 +26,6 @@ const bigDogs = [
     height: "55 - 65 cm",
     characteristics: "Protective, loyal, brave and highly intelligent.",
     suitableOwners: "Perfect for sporty people or security-related work."
-  },
-  {
-    breed: "Siberian Husky",
-    image: "https://images.unsplash.com/photo-1605568427561-40dd23c2acea",
-    weight: "20 - 27 kg",
-    height: "50 - 60 cm",
-    characteristics: "Energetic, independent and resilient.",
-    suitableOwners: "Perfect for very active people and sports lovers."
   }];
 
   const smallDogs = [
@@ -72,39 +76,9 @@ function estiloajarri(elementua) {
 
 estiloajarri(details);
 
-let dog1 = "";
-let dog2 = "";
-let dog3 = "";
-let dog4 = "";
-
-bigDogs.forEach((dog, index) => {
-  dog1 += `
-    <div id="dog-details" style = "text-align: center;>
-    <a href="details.html?type=big&id=${index}">
-    <img src="${dog.image}" alt ="${dog.breed}" style = "Width = "100px"">
-    <h2>${dog.breed}</h2>
-    </a>
-    </div> `;
-});
-bigDogs.forEach((dog, index) => {
-  dog2 += `
-    <div id="dog-details" style = "text-align: center;>
-    <a href="details.html?type=big&id=${index}">
-    <img src="${dog.image}" alt ="${dog.breed}" style = "Width = "100px"">
-    <h2>${dog.breed}</h2>
-    </a>
-    </div> `;
-});
-bigDogs.forEach((dog, index) => {
-  dog3 += `
-    <div id="dog-details" style = "text-align: center;>
-    <a href="details.html?type=big&id=${index}">
-    <img src="${dog.image}" alt ="${dog.breed}" style = "Width = "100px"">
-    <h2>${dog.breed}</h2>
-    </a>
-    </div> `;
-});
-smallDogs.forEach((dog, index) => {
+if (type === 'small' && id === '0') {
+  let dog4 = "";
+  smallDogs.forEach((dog, index) => {
   dog4 += `
     <div id="dog-details" style = "text-align: center;>
     <a href="details.html?type=small&id=${index}">
@@ -113,22 +87,66 @@ smallDogs.forEach((dog, index) => {
     </a>
     </div> `;
 });
-
-if (type === 'small' && id === '0') {
 details.innerHTML = dog4;
 }
 if (type === 'big' && id === '0') {
+  let dog3 = "";
+  bigDogs2.forEach((dog, index) => {
+  dog3 += `
+    <div id="dog-details" style = "text-align: center;>
+    <a href="details.html?type=big&id=${index}">
+    <img src="${dog.image}" alt ="${dog.breed}" style = "Width = "100px"">
+    <h2>${dog.breed}</h2>
+    </a>
+    </div> `;
+});
 details.innerHTML = dog3;
 }
 if (type === 'big' && id === '1') {
+  let dog2 = "";
+  bigDogs3.forEach((dog, index) => {
+  dog2 += `
+    <div id="dog-details" style = "text-align: center;>
+    <a href="details.html?type=big&id=${index}">
+    <img src="${dog.image}" alt ="${dog.breed}" style = "Width = "100px"">
+    <h2>${dog.breed}</h2>
+    </a>
+    </div> `;
+});
 details.innerHTML = dog2;
 }
 if (type === 'big' && id === '2') {
+  let dog1 = "";
+  bigDogs.forEach((dog, index) => {
+  dog1 += `
+    <div id="dog-details" style = "text-align: center;>
+    <a href="details.html?type=big&id=${index}">
+    <img src="${dog.image}" alt ="${dog.breed}" style = "Width = "100px"">
+    <h2>${dog.breed}</h2>
+    </a>
+    </div> `;
+});
 details.innerHTML = dog1;
 }
 
+  /*
+  imageGroup.forEach(route => {
+            console.log(route);
+            const newImg = document.createElement('img');
+            newImg.src = 'images/'+route;
+            newImg.addEventListener('click', ()=> {
+                alert("Click egin duzu argazkiari");
+                const ventana = window.open("", "", "width=800,height=600");
+                    ventana.document.write(`
+                        <body style = "text-align:center;">
+                        <img src="images/${route}" style="max-width:90%;"><br>
+                        <button onclick="window.close()">Done</button>
+                        </body>
+                        `);
+            });
+            bottomDiv.appendChild(newImg);
+        });
 
-/*
 const container1 = document.getElementById('container-cards1');
 const container2 = document.getElementById('container-cards2');
 function estiloakEman(elementua) {
