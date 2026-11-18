@@ -20,10 +20,10 @@ function aldatukontrastea() {
 
 if (options === "light") {
     alert("click");
-    document.body.style.filter = 'invert(100%)';
+    document.body.style.background = 'invert(0%)';
 } else if (options === "dark") {
     alert("clock");
-    document.body.style.filter = 'invert(0%)';
+    document.body.style.background = 'invert(100%)';
 }
 
 });
