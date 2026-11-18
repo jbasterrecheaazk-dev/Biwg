@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso y Gestión | Luma Inmobiliaria</title>
+  <link rel="stylesheet" href="css/styleTransactionPage.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="firstPage.html" aria-label="Luma Inmobiliaria, inicio">
+      <span class="brand-mark">L</span>
+      <span class="brand-name">LUMA <small>INMOBILIARIA</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="firstPage.html?catalogo">← Volver al catálogo</a>
+    </nav>
+  </header>
+
+  <main class="section-wrap transaction-main" id="transaction-container">
+   
+    <div class="admin-panel">
+        <div class="admin-header">
+          <h2>Panel de Administración — Transacciones</h2>
+        </div>
+        <div id="admin-alert" class="alert-box hidden"></div>
+         <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr> <th>ID</th>
+                   <th>Name</th>
+                   <th>Email</th>
+                   <th>Id Propiedad</th>
+                   <th>Estado</th>
+                   <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+                 <!-- El contenido se renderiza dinámicamente según el flujo con JS -->
+                <tr data-id="5">
+                <td>#5</td><!--id-->
+            <td>Fermin Calbeton</td><!--name--><!--surname-->
+            <td>fermin@123</td><!--email-->
+            <td>1</td><!--properties name  type-->
+            <td> iniciada</td>
+             <td>
+                <button class="btn-delete">Delete</button>
+            </td>  
+            </tr>
+            </tbody>
+               </table>
+           </div>
+          </div>
+  
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand brand-footer" href="firstPage.html">
+      <span class="brand-mark">L</span>
+      <span class="brand-name">LUMA <small>INMOBILIARIA</small></span>
+    </a>
+    <p>Gestión inmobiliaria transparente, cercana y profesional.</p>
+    <span>© 2026 Luma Inmobiliaria</span>
+  </footer>
+
+  <script src="js/transactionPage.js" type="text/javascript"></script>
+</body>
+</html>

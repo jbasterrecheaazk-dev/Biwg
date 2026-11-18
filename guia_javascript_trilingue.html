@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guía JavaScript · Consulta y proyectos</title>
+<link href="guideTrilingue.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body>
+  <header>
+    <h1>JavaScript paso a paso · Guía de consulta</h1>
+    <p>Para aprender, practicar y consultar durante cualquier proyecto o examen · Sin Internet</p>
+    <div class="langbar" role="group" aria-label="Idioma / Hizkuntza / Language">
+      <button type="button" data-lang="es" aria-pressed="true">Castellano</button>
+      <button type="button" data-lang="eu" aria-pressed="false">Euskara</button>
+      <button type="button" data-lang="en" aria-pressed="false">English</button>
+    </div>
+  </header>
+  <main>
+    <nav aria-label="Índice de temas">
+      <strong>Elige un bloque</strong>
+      <div class="block-tabs" role="group" aria-label="Bloques de la guía">
+        <button id="tabLearn" type="button">📘 Aprender JavaScript</button>
+        <button id="tabProject" type="button">🛠 Resolver proyectos</button>
+      </div>
+      <p id="blockDescription" class="small"></p>
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Ej.: botón, carrito..." aria-label="Buscar tema" style="width:100%">
+      </div>
+      <div class="links" id="links"></div>
+      <div class="toolbar">
+        <button id="larger" type="button">Aumentar letra</button>
+      </div>
+      <p class="small">Elige un tema. Solo se muestra uno cada vez para facilitar la lectura.</p>
+    </nav>
+    <article>
+      <div class="toolbar">
+        <button id="prev" type="button">← Anterior</button>
+        <button id="next" type="button">Siguiente →</button>
+        <button id="print" type="button">Imprimir guía</button>
+    </div>
+    <p id="status" aria-live="polite"></p>
+    <section id="content" tabindex="-1"></section>
+  </article>
+</main>
+<script src="guide.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "name": "Piso Luminoso en el Centro",
+      "type": "Piso",
+      "operation": "Venta",
+      "address": "Calle Mayor 12",
+      "city": "Bilbao",
+      "description": "Amplio piso reformado de tres habitaciones con gran iluminación natural en pleno centro.",
+      "price": 245000,
+      "floor": "3º A",
+      "area": 95,
+      "available": true,
+      "image": "img/property1.png"
+    },
+    {
+      "id": 2,
+      "name": "Ático Exclusivo con Vistas",
+      "type": "Ático",
+      "operation": "Venta",
+      "address": "Avenida Gran Vía 45",
+      "city": "Donostia",
+      "description": "Ático de lujo con terraza panorámica, acabados de primera calidad y plaza de garaje.",
+      "price": 380000,
+      "floor": "Ático B",
+      "area": 110,
+      "available": true,
+      "image": "img/property2.png"
+    },
+    {
+      "id": 3,
+      "name": "Local Comercial Céntrico",
+      "type": "Local",
+      "operation": "Alquiler",
+      "address": "Calle Comercio 8",
+      "city": "Donostia",
+      "description": "Local a pie de calle con gran escaparate e inmejorable ubicación comercial.",
+      "price": 1200,
+      "floor": "Bajo",
+      "area": 85,
+      "available": true,
+      "image": "img/property3.png"
+    },
+    {
+      "id": 4,
+      "name": "Piso Moderno para Alquilar",
+      "type": "Piso",
+      "operation": "Alquiler",
+      "address": "Calle Verde 15",
+      "city": "Errenteria",
+      "description": "Piso totalmente amueblado y equipado, listo para entrar a vivir en zona residencial tranquila.",
+      "price": 950,
+      "floor": "2º C",
+      "area": 70,
+      "available": true,
+      "image": "img/property4.png"
+    },
+    {
+      "id": 5,
+      "name": "Nave Industrial o Local Diáfano",
+      "type": "Local",
+      "operation": "Venta",
+      "address": "Polígono Industrial 4",
+      "city": "Bilbao",
+      "description": "Espacio diáfano perfecto para oficinas, almacén o negocio comercial en zona de gran expansión.",
+      "price": 180000,
+      "floor": "Planta Baja",
+      "area": 150,
+      "available": false,
+      "image": "img/property5.png"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 2,
+      "name": "Mikel",
+      "surname": "Martin",
+      "email": "mikel123",
+      "propertyId": 3,
+      "status": "iniciada"
+    },
+    {
+      "id": 5,
+      "name": "Fermin",
+      "surname": "Calbeton",
+      "email": "fermin@123",
+      "propertyId": 1,
+      "status": "iniciada"
+    },
+    {
+      "name": "Bea",
+      "surname": "Berri",
+      "email": "bea123",
+      "propertyId": 4,
+      "status": "solicitud",
+      "id": 6
+    }
+  ]
+}

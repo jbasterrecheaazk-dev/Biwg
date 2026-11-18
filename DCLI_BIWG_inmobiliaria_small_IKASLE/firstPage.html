@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luma Inmobiliaria | Pisos y Locales</title>
+  <link rel="stylesheet" href="css/styleFirstPage.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" id="nav-logo" aria-label="Luma Inmobiliaria, inicio">
+      <span class="brand-mark">L</span>
+      <span class="brand-name">LUMA <small>INMOBILIARIA</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a id="nav-inmuebles" href="#">Explorar catálogo</a>
+      <a id="nav-agencia" href="#">La agencia</a>
+      <a id="nav-transaction" href="transactionPage.html">Transacciones</a>
+      <select id="type-select" class="nav-select" aria-label="Filtrar por tipo de inmueble">
+        <option value="">Tipos</option>
+      </select>
+    </nav>
+  </header>
+
+  <main>
+    <!-- SECCIÓN 1: La agencia / Hero -->
+    <section class="hero" id="sec-agencia">
+      <div class="hero-content">
+        <p class="eyebrow">ENCLAVE Y CONFORT</p>
+        <h1>Encuentra tu próximo<br><em>hogar o local.</em></h1>
+        <p class="hero-description">Explora nuestra selección de inmuebles en venta y alquiler. Asesoramiento personalizado.</p>
+       </div>
+    </section>
+ 
+    <!-- SECCIÓN 2: CARDS -->
+    <section class="section-wrap" id="sec-all-properties" style="padding-top: 20px; padding-bottom: 60px;">
+      <p class="eyebrow eyebrow-dark">INMUEBLES</p>
+      <div class="property-grid" id="container-all-prop" aria-label="Listado de inmuebles">
+        <!-- tarjetas de inmuebles carga dinámic-->
+        <article class="property-card card-border">
+         <!--segun disponibilidad card-available or card-unavailable -->
+            <div class="property-image" style="background-image: url('img/property1.png')">
+            <span class="property-tag tag-sale "><!--tag-sale tag-rent tag-unavailable -->
+                <strong class="tag-operation">VENTA</strong><!--piso.operation -->
+                <span class="tag-type">·Atico</span><!--piso.type -->
+                </span>
+            </div> 
+            <div class="property-info">
+               <div class="property-heading">
+            <h3>Piso Luminoso en el Centro</h3><!--name-->
+            <p class="property-city">Madrid</p><!--city-->
+          </div>
+          <div class="property-price-wrap">
+            <p class="property-price">245000 € </p><!--price-->
+          </div> 
+            </div>   
+            <button class="text-link text-link-primary">Ver propiedad ↗</button>    
+        </article>
+      </div>
+    </section>   
+       <!-- SECCIÓN 3: DETAILS -->
+<section class="section-wrap" id="sec-details" >
+
+    <!-- COLUMNA DERECHA: FORMULARIO -->
+   
+      <div class="auth-card">
+        <h2 class="msgForm" >Para contactar con nuestros agentes introduzca los datos</h2>
+       
+        <form name="contactForm" id="contactForm" class="auth-form">
+          <div class="form-group">
+            <label for="input-name">Nombre</label>
+            <input type="text" id="input-name" placeholder="Ej: Sara " required />
+          </div>
+          <div class="form-group">
+            <label for="input-surname">Apellido</label>
+            <input type="text" id="input-surname" placeholder="Ej: Merel" required />
+          </div>
+          <div class="form-group">
+            <label for="input-email">Email</label>
+            <input type="email" id="input-email" placeholder="sara@luma.com" required />
+          </div>
+          <div id="form-error" class="error-msg hidden"></div>
+          <div class="property-action">
+            <button id="btn-contact-agent" type="button" class="button-submit">Solicitar contacto</button>
+          </div>
+        </form>
+      </div>
+   
+</section>
+    
+  </main>
+
+  <footer class="site-footer" id="contacto">
+    <a class="brand brand-footer" href="#">
+      <span class="brand-mark">L</span>
+      <span class="brand-name">LUMA <small>INMOBILIARIA</small></span>
+    </a>
+    <p>Gestión inmobiliaria transparente, cercana y profesional.</p>
+    <span>© 2026 Luma Inmobiliaria</span>
+  </footer>
+
+  <script src="js/firstPage.js" type="text/javascript"></script>
+</body>
+</html>
+ 
