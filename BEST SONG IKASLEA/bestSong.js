@@ -4,8 +4,8 @@ const themeSelect = document.getElementById('themeSelect');
 const options = document.querySelectorAll('.option');
 
 accessibilityPanel.addEventListener('click', () => {
-//alert("click");
 /*
+alert("click");
 function aldatukontrastea() {
     const html = document.documentElement;
     const invertido = html.style.filter === 'invert(100%)';
