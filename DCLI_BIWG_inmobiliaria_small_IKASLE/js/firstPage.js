@@ -6,13 +6,10 @@ const secagencia = document.getElementById('sec-agencia');
 
 sections = document.getElementsByClassName('section-wrap');
 
-sections.classList.remove('active');
-
+sections.classList.toggle('hidden');
 if (navinmuebles) {
-    navinmuebles.classList.add('active');
+    navinmuebles.classList.toggle('active');
 }
-
-
 
 /*
 sections.adde
