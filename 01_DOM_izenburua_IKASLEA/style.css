@@ -1,0 +1,28 @@
+/* Orriaren itxura. Ariketa honetan JavaScript landuko dugu. */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fb;
+  color: #203047;
+  margin: 0;
+  padding: 40px 16px;
+}
+main {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 32px;
+  background-color: white;
+  border: 1px solid #dbe4ee;
+  border-radius: 12px;
+  text-align: center;
+}
+h1 { font-size: 28px; }
+button {
+  padding: 12px 20px;
+  background-color: #2257a5;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  font-size: 17px;
+  cursor: pointer;
+}
+button:focus-visible { outline: 3px solid #e3a533; outline-offset: 3px; }
