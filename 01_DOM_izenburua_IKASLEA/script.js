@@ -7,10 +7,12 @@ const boton = document.getElementById('botoia');
 console.log(boton);
 
 // 3. Izenburua aldatzeko funtzioa sortzen dut.
+// 3. Izenburuaren kolorea aldatzeko funtzioa sortzen dut.
 function IzenburuaAldatu() {
     console.log(boton);
     //alert("Botoia sakatu da");
-    izena.textContent = "Hola Mundo.";
+    //izena.textContent = "Hola Mundo.";
+    izena.style.color = "red";
 }
 
 // 4. Botoia sakatzean funtzioa exekutatzen dut. 
