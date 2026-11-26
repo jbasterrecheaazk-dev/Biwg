@@ -13,7 +13,6 @@ function IzenburuaAldatu() {
     izena.textContent = "Hola Mundo.";
 }
 
-
 // 4. Botoia sakatzean funtzioa exekutatzen dut. 
 boton.addEventListener( "click", function () {
     IzenburuaAldatu();
